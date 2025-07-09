@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Language to Text</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Language to Text Conversion</h1>
+
+    <div class="frames">
+      <div class="frame">
+        <h2>Live Camera</h2>
+        <img src="{{ url_for('video_feed') }}" id="video-feed">
+      </div>
+      <div class="frame">
+        <h2>Processed Image</h2>
+        <div class="processed-image">[Processed Image Placeholder]</div>
+      </div>
+    </div>
+
+    <div class="info">
+      <p><strong>Character:</strong> <span class="output" id="char-output">C</span></p>
+      <p><strong>Sentence:</strong> <span class="output" id="sentence-output">Hello</span></p>
+    </div>
+
+    <div class="buttons">
+      <button>Suggestion 1</button>
+      <button>Suggestion 2</button>
+      <button>Suggestion 3</button>
+      <button>Suggestion 4</button>
+    </div>
+
+    <div class="actions">
+      <button>Speak</button>
+      <button>Clear</button>
+    </div>
+  </div>
+</body>
+</html>
